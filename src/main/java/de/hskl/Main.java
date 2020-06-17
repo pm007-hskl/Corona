@@ -44,6 +44,8 @@ import de.hskl.view.GuiSettings;
 import g4p_controls.*;
 import processing.core.PApplet;
 
+import javax.swing.*;
+
 import static javax.swing.JOptionPane.*;
 
 import java.awt.*;
@@ -398,8 +400,12 @@ public class Main extends PApplet {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            showMessageDialog(null, test);
+            JTextArea textArea=new JTextArea(test);
+            JScrollPane scrollPane=new JScrollPane(textArea);
+            textArea.setLineWrap(true);
+            textArea.setWrapStyleWord(true);
+            scrollPane.setPreferredSize(new Dimension(800,800));
+            JOptionPane.showMessageDialog(null,scrollPane,"Infos zur Simulation und Covid-19", OK_OPTION);
 
         }
     }
