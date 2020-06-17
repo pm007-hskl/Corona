@@ -107,7 +107,7 @@ public class Main extends PApplet {
          * Erzeugen der Buttons
          * */
 
-        btnstart = new GButton(this, 32, 20, 140, 20, "START");
+        btnstart = new GButton(this, 32, 20, 140, 20, "NEUSTART");
         btnstart.setLocalColorScheme(GCScheme.GREEN_SCHEME);
 
         btnstop = new GButton(this, 32, 50, 140, 20, "STOP");
