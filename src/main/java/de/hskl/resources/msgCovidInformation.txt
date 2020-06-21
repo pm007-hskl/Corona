@@ -1,11 +1,12 @@
-HOW TO USE:
-    Um die Simulation zu starten, klicke auf "NEUSTART" falls Änderungen an den Variablen gemacht wurden muss erneut auf "NEUSTART"
-    gedrückt werden, um die Änderung zu übernehmen.
-
+INFO:
     Diese Simulation dient zur Visualisierung der Verteilung der Corona-Pandemie und wurde erstellt vom Team PM007
     der Hochschule Kaiserslautern. Sie soll helfen ein tieferes Verständnis für die Verbreitung des Corona-Virus SARS-CoV2 zu vermitteln.
     Die Simulation erhebt keinerlei Anspruch auf die exakte Abbildung der Realität und sollte stets als vereinfachte Darstellung
     eines hochkomplexen Themas betrachtet werden.
+------------------------
+HOW TO USE:
+    Beim Öffnen der Simulation wird eine voreingestellte Simulation gestartet, um eigene Bedingungen in die Simulation zu übernehmen,
+    muss auf "NEUSTART" gedrückt werden. Somit wird eine neue Simulation gestartet mit den neuen Startbedingungen.
 ------------------------
 COVID-19:
     Die aus dem Coronavirus resultierende Lungenkrankheit heißt Covid-19. Die Verläufe der Krankheit sind laut Robert Koch-Institut
