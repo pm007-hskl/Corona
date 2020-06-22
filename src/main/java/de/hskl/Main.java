@@ -38,6 +38,7 @@ package de.hskl;
 import de.hskl.contol.AlgorithmInfection;
 import de.hskl.contol.MaskDistanceController;
 import de.hskl.model.StatusPoint;
+import de.hskl.resources.msgCovidInformation;
 import de.hskl.util.MathUtil;
 import de.hskl.model.Person;
 import de.hskl.view.GuiSettings;
@@ -178,8 +179,8 @@ public class Main extends PApplet {
         riskStatePoint = new StatusPoint(this, 0, 0, 0).setxPos(10).setyPos(670).setStroke(10);
 
         /*
-        * Info-Knopf erstellen
-        * */
+         * Info-Knopf erstellen
+         * */
 
         info = new GButton(this, 32, 720, 140, 20, "INFO");
         info.setLocalColorScheme(GCScheme.CYAN_SCHEME);
@@ -245,8 +246,8 @@ public class Main extends PApplet {
 
 
         /*
-        * Person anzeigen und Bewegung berechnen
-        */
+         * Person anzeigen und Bewegung berechnen
+         */
 
         for (int i = 0; i < persons.length; i++) {
             persons[i].move();
@@ -254,8 +255,8 @@ public class Main extends PApplet {
         }
 
         /*
-        * Zählt bei jedem Durchlauf die Anzahl toter, gesunder, geheilter und infizierter Menschen
-        */
+         * Zählt bei jedem Durchlauf die Anzahl toter, gesunder, geheilter und infizierter Menschen
+         */
 
         for (int i = 0; i < persons.length; i++) {
             switch (persons[i].getCurrentHealthStatus()) {
@@ -275,8 +276,8 @@ public class Main extends PApplet {
         }
 
         /*
-        * Ruft den Algorithmus auf der für die Infektion gesunder Menschen verantwortlich ist
-        * */
+         * Ruft den Algorithmus auf der für die Infektion gesunder Menschen verantwortlich ist
+         * */
 
         AlgorithmInfection.infect(persons, GuiBasicReproductionRatioValue);
 
@@ -386,34 +387,31 @@ public class Main extends PApplet {
             }
         }
         if (button == info && event == GEvent.CLICKED) {
-            String test = "";
-            String line;
-            BufferedReader f = null;
-            try {
-                f = new BufferedReader(
-                        new FileReader(".\\src\\main\\java\\de\\hskl\\resources\\msgCovidInformation.txt"));
-                while (true) {
-                    if (!((line = f.readLine()) != null)) break;
-                    test = test + " " + line + "\n";
+
+
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    /*JTextArea textArea=new JTextArea(msgCovidInformation.getText());*/
+                    JTextArea textArea = new JTextArea(msgCovidInformation.getText());
+                    //textArea.append(getText());
+                    JScrollPane scrollPane = new JScrollPane(textArea);
+                    textArea.setLineWrap(true);
+                    textArea.setWrapStyleWord(true);
+                    scrollPane.setPreferredSize(new Dimension(800, 800));
+                    JOptionPane.showMessageDialog(null, scrollPane, "Infos zur Simulation und Covid-19", OK_OPTION);
+
                 }
-                f.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            JTextArea textArea=new JTextArea(test);
-            JScrollPane scrollPane=new JScrollPane(textArea);
-            textArea.setLineWrap(true);
-            textArea.setWrapStyleWord(true);
-            scrollPane.setPreferredSize(new Dimension(800,800));
-            JOptionPane.showMessageDialog(null,scrollPane,"Infos zur Simulation und Covid-19", OK_OPTION);
+            });
+
 
         }
     }
 
 
     /*
-    * Handhabt die Checkboxen für Maskenpflicht und Abstandsregelung
-    * */
+     * Handhabt die Checkboxen für Maskenpflicht und Abstandsregelung
+     * */
 
     public void handleToggleControlEvents(GToggleControl box, GEvent event) {
         if (Mask.isSelected() == true && Distance.isSelected() == false) {
