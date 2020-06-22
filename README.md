@@ -35,7 +35,7 @@ SOFTWARE.
 
 ## Ausführen eine Java Datei
 Zum Ausführen einer Java Datei benötigst du das *Java Runtime Environment*, dieses kannst du zum Beispiel direkt auf der JAVA Homepage herunterladen.
-[Link zur Downloadseite von Java](https://www.java.com/de/download/manual.jsp).
+[Link zur Downloadseite von Java](https://www.java.com/de/download/).
 
 Nachdem die Installation beendet ist kannst du im Ordner "executable" eine Datei finden mit dem Namen "PM007-Corona-Simulation.jar". Diese Datei wird mit einem Doppelklick geöffnet.
 
