@@ -38,7 +38,7 @@ Zum Ausführen einer Java Datei benötigst du das *Java Runtime Environment*, di
 [Link zur Downloadseite von Java](https://www.java.com/de/download/manual.jsp).
 
 Nachdem die Installation beendet ist kannst du im Ordner "executable" eine Datei finden mit dem Namen "PM007-Corona-Simulation.jar". Diese Datei wird mit einem Doppelklick geöffnet.
-[Link zur Datei](executable\PM007-Corona-Simulation.jar)
+
 
 ## Installationsanweisung um ein Mavenprojekt zu starten
 Hier wird exemplarisch ein Mavenprojekt in dem Editor *Eclipse* geöffnet. Das Vorgehen kann in anderen Editoren etwas unterschiedlich sein.
