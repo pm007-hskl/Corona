@@ -33,7 +33,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Ausführen eine Java Datei
+## Ausführen einer Java Datei
 Zum Ausführen einer Java Datei benötigst du das *Java Runtime Environment*, dieses kannst du zum Beispiel direkt auf der JAVA Homepage herunterladen.
 [Link zur Downloadseite von Java](https://www.java.com/de/download/).
 
